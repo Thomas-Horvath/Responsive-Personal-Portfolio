@@ -1,0 +1,21 @@
+:root {
+    --bg-color: #fff;
+    --fg-color: #202124;
+    --main-color: #cf0a0a;
+    --dark-color: #9e0000;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+body {
+    font-family: 'Varela Round', sans-serif;
+    color: var(--fg-color);
+    background: var(--bg-color);
+    overflow-x: hidden;
+}
