@@ -19,3 +19,53 @@ body {
     background: var(--bg-color);
     overflow-x: hidden;
 }
+
+
+/* hasznos classzok */
+.container {
+    width: 93%;
+    max-width: 1400px;
+    margin: auto;
+}
+
+.flexDisplay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: var(--fg-color);
+    cursor: pointer;
+}
+
+button,
+input {
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+img {
+    width: 36px;
+}
+
+section {
+    height: 100vh;
+    flex-wrap: wrap;
+    padding-top: 6rem;
+    overflow: hidden;
+}
+
+h1 {
+    font-size: 3rem;
+}
+h3 {
+    font-size: 1.2rem;
+}
