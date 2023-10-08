@@ -1,10 +1,18 @@
 :root {
-    --bg-color: #fff;
-    --fg-color: #202124;
     --main-color: #cf0a0a;
     --dark-color: #9e0000;
 }
 
+/*  for main.js */
+.light-mode {
+    --bg-color: #fff;
+    --fg-color: #202124;
+}
+
+.dark-mode {
+    --bg-color: #202124;
+    --fg-color: #fff;
+}
 
 * {
     margin: 0;
@@ -66,6 +74,102 @@ section {
 h1 {
     font-size: 3rem;
 }
+
 h3 {
     font-size: 1.2rem;
+}
+
+h1 span {
+    color: var(--main-color);
+    font-size: 3rem;
+}
+
+
+
+
+
+
+
+/* header */
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+}
+
+header nav {
+    padding: 1rem 0;
+    background: var(--bg-color);
+}
+
+header nav div:nth-child(1) {
+    justify-content: space-between;
+}
+
+header nav .navLogo {
+    font-size: 2rem;
+}
+
+header nav .navMenu {
+    width: 65%;
+    padding: 0 1rem;
+}
+
+.navMenu ul {
+    justify-content: flex-end;
+}
+
+.navMenu ul li {
+    font-size: 1.5rem;
+    padding: 0 1.5rem;
+    position: relative;
+}
+
+.navActive {
+    color: var(--main-color);
+}
+
+.navMenu ul li a {
+    transition: color 0.3s ease-in-out;
+}
+
+.navMenu ul li a:hover {
+    color: var(--main-color);
+}
+
+nav .navBtn {
+    position: relative;
+}
+
+nav .navBtn img {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: scale 0.2s ease-in-out;
+}
+
+nav .navBtn img:hover {
+    scale: 1.1;
+}
+
+/* for main.js */
+.displayNone {
+    display: none;
+}
+
+.displayBlock {
+    display: block;
+}
+
+.hamburger {
+    display: none;
+    background: url("./Assets/menu.svg") no-repeat center;
+    background-size: cover;
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
 }
