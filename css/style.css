@@ -115,6 +115,7 @@ header nav .navMenu {
     padding: 0 1rem;
 }
 
+
 .navMenu ul {
     justify-content: flex-end;
 }
@@ -172,4 +173,79 @@ nav .navBtn img:hover {
     width: 36px;
     height: 36px;
     cursor: pointer;
+}
+
+/* hero section */
+#heroSection {
+    position: relative;
+    /*  padding: 0 1rem; */
+}
+
+#heroSection .left {
+    width: 60%;
+    margin-bottom: 3rem;
+}
+
+#heroSection .right {
+    width: 40%;
+}
+
+#heroSection .left .position {
+    display: inline-block;
+    color: #fff;
+    background: var(--main-color);
+    padding: 0.4rem 1rem;
+    border: 2px solid var(--dark-color);
+    border-radius: 50px;
+    box-shadow: 0 0 18px -6px var(--dark-color);
+    margin: 1.2rem 0;
+}
+
+#heroSection .left .name {
+    margin-bottom: 1rem;
+}
+
+#heroSection .left .name h1 {
+    font-size: 4.5rem;
+}
+
+#heroSection .left .about {
+    width: 90%;
+    font-size: 1.1rem;
+    margin-bottom: 3rem;
+}
+
+#heroSection .right .circle {
+    width: 390px;
+    height: 390px;
+    margin: auto;
+    background: var(--main-color);
+    border: 6px solid var(--dark-color);
+    border-radius: 100%;
+    cursor: pointer;
+    position: relative;
+
+}
+
+#heroSection .right .circle::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 410px;
+    height: 410px;
+    border: 6px dashed var(--dark-color);
+    border-radius: 50%;
+}
+#heroSection .right .circle::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 450px;
+    height: 450px;
+    border: 6px dashed var(--dark-color);
+    border-radius: 50%;
 }
