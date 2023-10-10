@@ -422,3 +422,92 @@ p span {
     color: #fff;
     padding: 0 6px;
 }
+
+
+/* skills section */
+
+#skillsSection .skills {
+    flex-wrap: wrap;
+    width: 100%;
+    border-top: 1px solid var(--fg-color);
+}
+
+#skillsSection .skill {
+    justify-content: space-between;
+    padding: 0.9rem 0;
+    border-bottom: 1px solid var(--fg-color);
+    border-spacing: 0px;
+}
+
+#skillsSection .skill h1 {
+    font-size: 1.5rem;
+}
+
+#skillsSection .skill h1:nth-child(1) {
+    width: 270px;
+}
+
+#skillsSection .skill h1:nth-child(2) {
+    color: #fff;
+    background: var(--main-color);
+    padding: 0.3rem 0.9rem 0.2rem 0.9rem;
+    border-radius: 50px;
+    text-align: center;
+    width: 180px;
+}
+
+#skillsSection .skill .progressBar {
+    width: 30%;
+    height: 20px;
+    border: 3px solid var(--main-color);
+    border-radius: 50px;
+    overflow: hidden;
+    position: relative;
+}
+
+#skillsSection .skill .progressBar::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    height: 110%;
+    transform: translateY(-50%);
+    background: var(--main-color);
+    border-radius: 50px;
+}
+
+#skillsSection .skill:nth-child(1) .progressBar::before {
+    width: 95%;
+}
+
+#skillsSection .skill:nth-child(2) .progressBar::before {
+    width: 80%;
+}
+
+#skillsSection .skill:nth-child(3) .progressBar::before {
+    width: 70%;
+}
+
+#skillsSection .skill:nth-child(4) .progressBar::before {
+    width: 70%;
+}
+
+#skillsSection .skill:nth-child(5) .progressBar::before {
+    width: 65%;
+}
+
+#skillsSection .skill:nth-child(6) .progressBar::before {
+    width: 70%;
+}
+
+#skillsSection .skill:nth-child(7) .progressBar::before {
+    width: 30%;
+}
+
+#skillsSection .skill:nth-child(8) .progressBar::before {
+    width: 20%;
+}
+
+#skillsSection .skill:nth-child(9) .progressBar::before {
+    width: 95%;
+}
