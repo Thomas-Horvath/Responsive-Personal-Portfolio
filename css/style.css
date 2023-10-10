@@ -90,6 +90,7 @@ h1 span {
 
 
 
+
 /* header */
 header {
     position: fixed;
@@ -215,6 +216,67 @@ nav .navBtn img:hover {
     margin-bottom: 3rem;
 }
 
+.btns {
+    width: 100%;
+}
+
+.btns button {
+    position: relative;
+    padding: 1rem 0;
+    border-radius: 10px;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.btns button a {
+    color: #fff;
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+}
+
+.btns button:nth-child(1) {
+    margin-right: 2rem;
+    background: var(--main-color);
+}
+
+.btns button:nth-child(2) {
+    background: #000;
+}
+
+.btns button::before {
+    content: "";
+    position: absolute;
+    bottom: 6px;
+    left: 6px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    z-index: -1;
+    transition: scale 0.6s ease-in-out;
+}
+
+.btns button:nth-child(1)::before {
+    background: #000;
+}
+
+.btns button:nth-child(2)::before {
+    background: var(--main-color);
+}
+
+.btns button:hover::before {
+    scale: 60;
+}
+
+.btns button:active {
+    scale: 0.96;
+}
+
+
+
+
+
+
+
 #heroSection .right .circle {
     width: 390px;
     height: 390px;
@@ -238,6 +300,7 @@ nav .navBtn img:hover {
     border: 6px dashed var(--dark-color);
     border-radius: 50%;
 }
+
 #heroSection .right .circle::after {
     content: "";
     position: absolute;
@@ -246,6 +309,62 @@ nav .navBtn img:hover {
     transform: translate(-50%, -50%);
     width: 450px;
     height: 450px;
-    border: 6px dashed var(--dark-color);
+    border: 6px dotted var(--dark-color);
     border-radius: 50%;
+    z-index: -1;
+}
+
+#heroSection .right .circle .imgBox {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 100%;
+    border-radius: 20px 20px 200px 200px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#heroSection .right .circle .imgBox::before {
+    content: "";
+    position: absolute;
+    top: 63%;
+    left: 9%;
+    width: 39px;
+    height: 39px;
+    background: var(--dark-color);
+    border-radius: 50%;
+}
+
+#heroSection .right .circle .imgBox::after {
+    content: "";
+    position: absolute;
+    top: 54%;
+    right: 15%;
+    width: 30px;
+    height: 30px;
+    background: var(--dark-color);
+    border-radius: 50%;
+}
+
+#heroSection .right .circle img {
+    width: 120%;
+}
+
+#heroSection .links {
+    position: absolute;
+    bottom: 3%;
+    left: 0;
+}
+
+#heroSection .links a {
+    padding: 0 1rem;
+    transition: scale 2s ease-in-out;
+}
+
+#heroSection .links a:hover img {
+    transform-origin: bottom;
+    scale: 1.1;
 }

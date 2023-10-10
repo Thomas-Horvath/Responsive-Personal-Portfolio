@@ -1,6 +1,6 @@
 let rootEle = document.querySelector(":root");
 
-rootEle.classList.add(".light-mode");
+rootEle.classList.add("light-mode");
 
 
 let toggleBtn = document.querySelector(".toggleBtn");
