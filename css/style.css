@@ -195,11 +195,12 @@ nav .navBtn img:hover {
     display: inline-block;
     color: #fff;
     background: var(--main-color);
-    padding: 0.4rem 1rem;
+    padding: 1rem 2rem;
     border: 2px solid var(--dark-color);
     border-radius: 50px;
     box-shadow: 0 0 18px -6px var(--dark-color);
     margin: 1.2rem 0;
+    font-size: 2rem;
 }
 
 #heroSection .left .name {
@@ -389,7 +390,7 @@ section .heading::before {
     bottom: -10%;
     left: 50%;
     transform: translateX(-50%);
-    width: 180px;
+    width: 160px;
     height: 6px;
     background: var(--main-color);
     border-radius: 50px;
@@ -443,6 +444,7 @@ p span {
     font-size: 1.5rem;
 }
 
+
 #skillsSection .skill h1:nth-child(1) {
     width: 270px;
 }
@@ -489,15 +491,15 @@ p span {
 }
 
 #skillsSection .skill:nth-child(4) .progressBar::before {
-    width: 70%;
-}
-
-#skillsSection .skill:nth-child(5) .progressBar::before {
     width: 65%;
 }
 
-#skillsSection .skill:nth-child(6) .progressBar::before {
+#skillsSection .skill:nth-child(5) .progressBar::before {
     width: 70%;
+}
+
+#skillsSection .skill:nth-child(6) .progressBar::before {
+    width: 90%;
 }
 
 #skillsSection .skill:nth-child(7) .progressBar::before {
@@ -510,4 +512,53 @@ p span {
 
 #skillsSection .skill:nth-child(9) .progressBar::before {
     width: 95%;
+}
+
+/* portfolió */
+
+#portfolioSection {
+    height: 100%;
+}
+
+#portfolioSection h1:nth-child(1) {
+    margin-top: 3rem;
+}
+
+.projects {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 3rem;
+}
+
+.project {
+    width: 30%;
+    margin: 2rem 0;
+}
+
+.project .thumbnail {
+    width: 100%;
+    height: 300px;
+    margin-bottom: 1.2rem;
+    border: 6px solid var(--main-color);
+    border-radius: 20px;
+    box-shadow: 0 0 18px -6px var(--main-color);
+    transition: scale 0.3s;
+}
+
+.project .thumbnail:hover {
+    scale: 0.96;
+}
+
+.project h1 {
+    font-size: 1.5rem
+}
+
+.project .projectDesc {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin-top: 0.8rem;
+    margin-bottom: 1.8rem;
+
 }
