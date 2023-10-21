@@ -591,3 +591,16 @@ p span {
     margin: 2rem 0;
 
 }
+
+/*  footer */
+
+#footer {
+    background: var(--main-color);
+    padding: 1.2rem 0 1rem 0;
+}
+
+#footer p {
+    font-size: 1.1rem;
+    text-align: center;
+    color: #fff;
+}
