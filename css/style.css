@@ -3,6 +3,10 @@
     --dark-color: #9e0000;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /*  for main.js */
 .light-mode {
     --bg-color: #fff;
@@ -106,6 +110,12 @@ header nav {
 header nav div:nth-child(1) {
     justify-content: space-between;
 }
+
+/* for script.js */
+.navShadow {
+    box-shadow: 0 0 1rem #0000003d;
+}
+
 
 header nav .navLogo {
     font-size: 2rem;
