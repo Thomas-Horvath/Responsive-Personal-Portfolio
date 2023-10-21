@@ -560,5 +560,34 @@ p span {
     overflow: hidden;
     margin-top: 0.8rem;
     margin-bottom: 1.8rem;
+}
+
+/* contact */
+
+#contactSection form {
+    flex-wrap: wrap;
+}
+
+#contactSection form input,
+#contactSection form textarea {
+    width: 80%;
+    font-size: 1.4rem;
+    padding: 0.6rem 1rem;
+    margin: 1rem 0;
+    color: var(--fg-color);
+    background: transparent;
+    border: 2px solid var(--fg-color);
+    cursor: text;
+    border-radius: 50px;
+}
+
+#contactSection form textarea {
+    border-radius: 12px;
+    resize: none;
+}
+
+#contactSection .btns {
+    text-align: center;
+    margin: 2rem 0;
 
 }
