@@ -614,3 +614,157 @@ p span {
     text-align: center;
     color: #fff;
 }
+
+
+
+/*  animations */
+#heroSection .right .circle::before {
+    transform-origin: 0 0;
+    animation: rotateRightAnimation 30s infinite;
+}
+
+@keyframes rotateRightAnimation {
+    0% {
+        rotate: 0;
+    }
+
+    100% {
+        rotate: 360deg;
+    }
+}
+
+#heroSection .right .circle::after {
+    transform-origin: 0 0;
+    animation: rotateLeftAnimation 25s infinite;
+}
+
+@keyframes rotateLeftAnimation {
+    0% {
+        rotate: 0;
+    }
+
+    100% {
+        rotate: -360deg;
+    }
+}
+
+#heroSection .right .circle .imgBox::before {
+    animation: upAndDownAnimation 2s ease-in-out infinite alternate;
+}
+
+@keyframes upAndDownAnimation {
+    0% {
+        top: 45%;
+    }
+
+    100% {
+        top: 50%;
+    }
+}
+
+#heroSection .right .circle .imgBox::after {
+    animation: upAndDownSecondAnimation 2s ease-in-out infinite alternate;
+}
+
+@keyframes upAndDownSecondAnimation {
+    0% {
+        top: 50%;
+    }
+
+    100% {
+        top: 45%;
+    }
+}
+
+/*  animate on scroll */
+
+.hiddenRevealAnimation::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    width: 100%;
+    height: 100%;
+    background: var(--bg-color);
+    transition: transform 2s 0.3s;
+}
+
+.showRevealAnimation::before {
+    transform: translate(100%, -50%);
+}
+
+
+
+
+
+
+.hiddenLeftAnimation {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-60%);
+    transition: all 1s;
+}
+
+.showLeftAnimation {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+
+
+
+.hiddenRightAnimation {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(60%);
+    transition: all 1s;
+}
+
+.showRightAnimation {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+
+
+
+.hiddenUpAnimation {
+    opacity: 0;
+    filter: blur(3px);
+    transform: translateY(60%);
+    transition: all 1s;
+}
+
+.showUpAnimation {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+}
+
+
+.hiddenProgressBarAnimation::before {
+    transform-origin: left;
+    scale: 0 1;
+    transition: scale 1s 0.6s;
+}
+
+.showProgressBarAnimation::before {
+    scale: 1;
+}
+
+
+
+.hiddenThumbnailAnimation {
+    opacity: 0;
+    filter: blur(3px);
+    scale: 0.6;
+    transition: all 1.5s;
+}
+
+.showThumbnailAnimation {
+    opacity: 1;
+    filter: blur(0);
+    scale: 1;
+}
