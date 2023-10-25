@@ -19,7 +19,7 @@ toggleBtn.addEventListener("click", () => {
 let allProjectThumbnail = document.querySelectorAll(".thumbnail");
 function setProjectThumbnails(allProjectThumbnail, projectName, color) {
     allProjectThumbnail.style = `
-    background: url( ../Assets/ProjectThumbnails/${projectName}.png) no-repeat center;
+    background: url( ./Assets/ProjectThumbnails/${projectName}.png) no-repeat center;
     background-size: contain;
     background-color: ${color};
     `;
@@ -132,6 +132,26 @@ function observeFuncion(elements, className) {
 observeFuncion(revealAnimateionElements, "showRevealAnimation");
 observeFuncion(leftAnimationElements, "showLeftAnimation");
 observeFuncion(rightAnimationElements, "showRightAnimation");
-observeFuncion(upAnimationElements, "showUpAnimation"); 
-observeFuncion(progressBarAnimationElements, "showProgressBarAnimation"); 
+observeFuncion(upAnimationElements, "showUpAnimation");
+observeFuncion(progressBarAnimationElements, "showProgressBarAnimation");
 observeFuncion(thumbnailAnimationElements, "showThumbnailAnimation");
+
+
+/*  hamburger menu */
+let hamburger = document.querySelectorAll(".hamburger, .navMenu, header");
+let body = document.querySelector("body");
+
+function hamburgerAnimation() {
+    hamburger[2].classList.toggle("hamburgerAnimation");
+    hamburger[1].classList.toggle("navMenuAnimation");
+    hamburger[0].classList.toggle("navMenuBackgroundAnimation");
+    body.classList.toggle("scrollOff");
+}
+allNavMenuItems.forEach((e) => {
+    e.addEventListener("click", ()=> {
+        hamburger[2].classList.toggle("hamburgerAnimation");
+        hamburger[1].classList.toggle("navMenuAnimation");
+        hamburger[0].classList.toggle("navMenuBackgroundAnimation");
+        body.classList.toggle("scrollOff");
+    });
+});

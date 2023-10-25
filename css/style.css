@@ -179,7 +179,7 @@ nav .navBtn img:hover {
 
 .hamburger {
     display: none;
-    background: url("./Assets/menu.svg") no-repeat center;
+    background: url("../Assets/menu.svg") no-repeat center;
     background-size: cover;
     width: 36px;
     height: 36px;
@@ -607,6 +607,7 @@ p span {
 #footer {
     background: var(--main-color);
     padding: 1.2rem 0 1rem 0;
+    margin-top: 20px;
 }
 
 #footer p {
@@ -767,4 +768,331 @@ p span {
     opacity: 1;
     filter: blur(0);
     scale: 1;
+}
+
+/*  media query */
+@media (max-width:1218px) {
+
+    /* herosection */
+    #heroSection .left {
+        width: 50%;
+    }
+
+
+
+    #heroSection .left .btns button {
+        width: 70%;
+        margin-bottom: 20px;
+    }
+
+    #heroSection .right {
+        width: 50%;
+    }
+
+    #heroSection .right .circle {
+        width: 360px;
+        height: 360px;
+    }
+
+    /* about section */
+    #aboutSection .right p {
+        line-height: 40px;
+    }
+
+    .project {
+        width: 32%;
+    }
+
+    /* portfolio section */
+    #portfolioSection .btns button {
+        margin-bottom: 20px;
+        width: 100%;
+    }
+
+    #header .navBtn {
+        position: fixed;
+        bottom: 6%;
+        right: 6%;
+        width: 60px;
+        height: 60px;
+        padding: 10px;
+        background: var(--bg-color);
+        border-radius: 12px;
+        box-shadow: 0 0 12px #00000036;
+        z-index: 200;
+    }
+
+    #header .navBtn button img {
+        left: 50%;
+        transform-origin: left top;
+        transform: translate(-50%, -50%);
+    }
+}
+
+
+
+
+@media (max-width:1024px) {
+    * {
+        font-size: 14px;
+    }
+
+    /* header */
+    .navMenu {
+        position: absolute;
+        top: 270%;
+        left: 50%;
+        transform: translateX(100%);
+        z-index: 100;
+        transition: transform 0.3s;
+    }
+
+    .navMenu ul {
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    .navMenu ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .navMenu li a {
+        font-size: 2rem;
+    }
+
+    .navMenu li:before,
+    #header .navMenu a::before {
+        display: none;
+    }
+
+    /*  navBtn */
+
+
+
+    .hamburger {
+        display: block;
+        position: absolute;
+        top: 50%;
+        right: 3%;
+        transform: translateY(-50%) rotate(0);
+        transition: transform 0.5s, background-image 0.1s 0.25s;
+
+    }
+
+    .hamburgerAnimation {
+        transform: translateY(-50%) rotate(360deg);
+        background-image: url("../Assets/close.svg");
+    }
+
+    .navMenuAnimation {
+        transform: translateX(-50%);
+    }
+
+    .navMenuBackgroundAnimation::before {
+        content: "";
+        position: fixed;
+        top: 72px;
+        transform: translateX(100%);
+        width: 100%;
+        height: 100%;
+        background: var(--bg-color);
+        z-index: 100;
+        transition: transform 0.3s;
+    }
+
+    .navMenuBackgroundAnimation::before {
+        transform: translateX(0);
+    }
+
+    .scrollOff {
+        overflow-y: hidden;
+    }
+
+    /* heroSection */
+    #heroSection .left {
+        width: 55%;
+    }
+
+    #heroSection .left .btns button {
+        margin-bottom: 1.8rem;
+    }
+
+    #heroSection .right {
+        width: 45%;
+    }
+
+    #heroSection .right .circle {
+        width: 300px;
+        height: 300px;
+    }
+
+    #heroSection .right .circle::after {
+        width: 360px;
+        height: 360px;
+    }
+
+    #heroSection .right .circle::before {
+        width: 330px;
+        height: 330px;
+    }
+
+    /* skill section */
+    #skillsSekcion .skill h1:nth-child(1) {
+        width: 220px;
+    }
+
+    /*  poertfolio section */
+    .project {
+        width: 45%;
+    }
+}
+
+@media (max-width:888px) {
+
+    #heroSection .right .circle {
+        width: 260px;
+        height: 260px;
+    }
+
+    #heroSection .right .circle::after {
+        width: 300px;
+        height: 300px;
+    }
+
+    #heroSection .right .circle::before {
+        width: 270px;
+        height: 270px;
+    }
+
+
+}
+
+@media (max-width:802px) {
+    body {
+        overflow-x: unset;
+    }
+
+    section {
+        height: unset;
+    }
+
+    /* hero section */
+    #heroSection {
+        flex-direction: column-reverse;
+
+    }
+
+    #heroSection .left {
+        width: 100%;
+        text-align: center;
+    }
+
+    #heroSection .left .btns button {
+        margin: 0 0 1.8rem 0;
+    }
+
+    #heroSection .left .name h1,
+    #heroSection .left .name h1 span {
+        font-size: 4rem;
+    }
+
+    #heroSection .links {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+
+    #heroSection .right {
+        width: 100%;
+        margin: 8rem 0 4rem 0;
+    }
+
+
+
+
+    /* about section */
+    #aboutSection .left,
+    #aboutSetion .right {
+        width: 100%;
+        text-align: center;
+        margin: 3rem 0;
+    }
+
+
+
+    /*  skills  */
+    #skillsSection .skills {
+        margin-top: 4rem;
+    }
+
+    #skillsSection .skills .skill {
+        flex-wrap: wrap;
+        gap: 1.5rem 0;
+    }
+
+    #skillsSection .skills .skill h1:nth-child(1) {
+        width: 60%;
+    }
+
+    #skillsSection .skills .skill h1:nth-child(2) {
+        width: 40%;
+    }
+
+    #skillsSection .skills .skill .progressBar {
+        width: 80%;
+    }
+
+    /* portfolio  */
+    .projects {
+        justify-content: center;
+    }
+
+    .project {
+        width: 90%;
+    }
+
+    .project .thumbnail:hover {
+        scale: 1;
+    }
+
+    .btns button:hover::before {
+        scale: 120;
+    }
+
+    /* contact */
+    #contact-form {
+        margin-top: 2rem;
+    }
+
+    /* footer */
+    #footer {
+        margin-top: 2rem;
+    }
+}
+
+
+@media (max-width:480px) {
+    * {
+        font-size: 12px;
+    }
+}
+
+
+
+@media (max-width:404px) {
+    * {
+        font-size: 10px;
+    }
+
+    #heroSection .links {
+        width: 100%;
+        text-align: center;
+
+    }
+
+    #heroSection .left {
+        margin-bottom: 4.5rem;
+    }
 }
